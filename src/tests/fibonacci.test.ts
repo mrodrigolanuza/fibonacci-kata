@@ -7,4 +7,7 @@ describe("The Fibonacci sequence", () => {
     it("when receives one returns one", () => {
         expect(getFibonacciNumber(1)).toBe(1);
     });
+    it("when any other number than zero or one, returns the sum of the two preceding numbers", () => {
+        expect(getFibonacciNumber(2)).toBe(1);
+    });
 });
