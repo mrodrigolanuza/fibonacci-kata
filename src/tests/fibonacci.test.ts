@@ -8,9 +8,8 @@ describe("The Fibonacci sequence", () => {
         expect(getFibonacciNumber(1)).toBe(1);
     });
     it("when any other number than zero or one, returns the sum of the two preceding numbers", () => {
-        expect(getFibonacciNumber(2)).toBe(1);
-        expect(getFibonacciNumber(3)).toBe(getFibonacciNumber(2)+getFibonacciNumber(1));
-        expect(getFibonacciNumber(4)).toBe(getFibonacciNumber(3)+getFibonacciNumber(2));
-        expect(getFibonacciNumber(5)).toBe(getFibonacciNumber(4)+getFibonacciNumber(3));
+        [2,3,4,5,6].forEach((number)=> 
+            expect(getFibonacciNumber(number)).toBe(getFibonacciNumber(number-1)+getFibonacciNumber(number-2)) 
+        );
     });
 });
