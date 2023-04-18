@@ -10,5 +10,7 @@ describe("The Fibonacci sequence", () => {
     it("when any other number than zero or one, returns the sum of the two preceding numbers", () => {
         expect(getFibonacciNumber(2)).toBe(1);
         expect(getFibonacciNumber(3)).toBe(getFibonacciNumber(2)+getFibonacciNumber(1));
+        expect(getFibonacciNumber(4)).toBe(getFibonacciNumber(3)+getFibonacciNumber(2));
+        expect(getFibonacciNumber(5)).toBe(getFibonacciNumber(4)+getFibonacciNumber(3));
     });
 });
